@@ -29,7 +29,7 @@ sudo n stable
 ```
 
 ### NodeJS installation
-
+[Above](#frontend), we show one way of doing that, here is another one:
 - Go to the official [website](https://nodejs.org/en) and download the latest LTS version  and follow the instructions or use a package manager like *apt* or [*snap*](https://github.com/nodejs/snap)
 ```bash
 sudo snap install node --classic --channel=18
@@ -39,47 +39,72 @@ The above command will install the latest LTS  version (18.16.0). Once installed
 
 ### Create the react app directory 
 
-```
+```bash
 npx create-react-app react_app
+yarn 
+yarn start
 ```
+
 
 ## building the backend from scratch
 
 In order to build the backend from scratch, you need to install the 
 following package within [```pipenv```](https://pipenv.pypa.io/en/latest/) tool. Why (did) we choose to work
 with pipenv can be found [here](https://realpython.com/pipenv-guide/)
-- django
-- gunicorn
-- uvicorn
-- daphne
-- celery 
-- redis
+
 
 From that point, you just need to follow up the ordinary path of creating project and apps within django.You also need to have docker installed on your system.
 
 ## building the project from this repo
 
 Go inside the directory you will like to download the project and run in your terminal the following: 
-```
+```bash
 git clone https://github.com/de20ce/generative_AIs_boilerplate.git
 docker build . -t backend
-docker run --publish 8000:8000 backend
+docker run --publish 8000:8080 backend
 ```
 
-Alternatively for the first command above, you can use Github CLI ```gh`` tool
+Alternatively for the first command above, you can use Github CLI ```gh``` tool
 
-```
+```bash
 gh repo clone https://github.com/de20ce/generative_AIs_boilerplate
 ```
 
 In another terminal and inside the current directory, run the frontend react app:
 
-```
+```bash
 docker build . -t frontend -f react.Dockerfile
 docker run --publish 3000:3000 frontend
 ```
 
-## License
+# ToDo
+- Django App
+    - &cross; install Django packages.
+        - django (installed :heavy_check_mark:)
+        - gunicorn (installed &check;, used &cross;)
+        - uvicorn (installed &check;, used &cross;)
+        - daphne (installed &check;, used &check;)
+        - celery (installed &check;, used &cross;)
+        - redis (installed &check;, used &cross;)
+        - channels (installed &cross;)
+        - channels-redis (installed &cross;)
+        - postgres (&cross; do not need to be installed on virtual env)
+    - &cross; configuration
+        - &cross; celery
+        - &cross; redis
+        - &cross; postgres
+    - &cross; websocket
+        - &cross; config
+        - &cross; defining path
+        - &cross; implement dummy chatbot behavior
+- React App
+    - &cross; chatbot page 
+    - &cross; install packages: websocket etc
+    - &cross; add dummy chatbot action management
+
+
+
+# License
 
 See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 
