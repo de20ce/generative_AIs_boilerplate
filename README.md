@@ -1,7 +1,7 @@
 Generative AI Project SetUp
 ---------------------------
 <div align="center">
-[![Generic badge](https://img.shields.io/badge/License-MIT-<COLOR>.svg?style=for-the-badge)](https://github.com/de20ce/generative_AIs_boilerplate/blob/master/LICENSE) 
+[![Generic badge](https://img.shields.io/badge/License-MIT_2.0-blue.svg)](https://github.com/de20ce/generative_AIs_boilerplate/blob/master/LICENSE) 
 </div>
 
 This project is done during EEIA 2023. EEIA is a summer school organised by *La Fondation Vallet*, *Benin Excellence* and *UNDP* in Benin.  The EEIA takes place over 4 weeks. The first three weeks are devoted to classes, practical work and lectures. The fourth is dedicated to projects. EEIA projects are practical solutions to computing problems solved with AI. The aim is to help students find their own solutions to AI problems, thanks to the lectures and practical work they receive during the first three weeks. The project we are sharing here involves creating a chatbot that can generate images and text from text(a kind of [Midjourney](https://docs.midjourney.com/)). The fundamental goal is to teach them how to do transfer learning on the one hand, and how to integrate their new model into an application (typically a web app) on the other.
@@ -127,11 +127,12 @@ docker run --publish 3000:3000 frontend
   Howpublished = {\url{https://github.com/de20ce/generative_AIs_boilerplate}}
 }
 ```
+Adonis, Landry and Vivien contribute equally.
 
 # Acknowledgement
 
 We are very grateful to all people from *La Fondation Vallet*, *Benin Excellence*, and *UNDP Benin* for this marvellous experience.
 
-# License
+# 🛡️ License
 
 See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
