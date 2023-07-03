@@ -1,0 +1,28 @@
+name: Django Chat App CI
+
+on: 
+  push:
+    branches: [ "main" ]
+
+jobs: 
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.10.6]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build Django docker image
+      run: |
+        docker build . --file Dockerfile --tag backend:last
+    - name: Run Django container
+      run: |
+        docker run -d -t -p 8000:8080 backend:last
+        sleep 50s
+    - name: Check the server response is 200
+      run: |
+        status=$(curl -w "%{http_code}\\n" -H "Accept:application/json" -H "Content-Type:application/json"  0.0.0.0:8000 -s -o /dev/null)
+        (test "$status" = "200" && echo "SUCCESS: The server status is $status, and it is running successfully") || echo "ERROR: The server fails running"
