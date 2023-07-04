@@ -1,7 +1,17 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/de20ce/generative_AIs_boilerplate/blob/master/LICENSE)
+![Django App](https://github.com/de20ce/generative_AIs_boilerplate/actions/workflows/django.yml/badge.svg)
+<br/>
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
+
+
+
 Generative AI Project SetUp
 ---------------------------
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/de20ce/generative_AIs_boilerplate/blob/master/LICENSE)
 
 
 This project is done during EEIA 2023. EEIA is a summer school organised by *La Fondation Vallet*, *Benin Excellence* and *UNDP* in Benin.  The EEIA takes place over 4 weeks. The first three weeks are devoted to classes, practical work and lectures. The fourth is dedicated to projects. EEIA projects are practical solutions to computing problems solved with AI. The aim is to help students find their own solutions to AI problems, thanks to the lectures and practical work they receive during the first three weeks. The project we are sharing here involves creating a chatbot that can generate images and text from text(a kind of [Midjourney](https://docs.midjourney.com/)). The fundamental goal is to teach them how to do transfer learning on the one hand, and how to integrate their new model into an application (typically a web app) on the other.
@@ -32,7 +42,7 @@ sudo n stable
 ```
 
 ### NodeJS installation
-[Above](#frontend), we show one way of doing that, here is another one (ours for thsi project):
+[Above](#frontend), we show one way of doing that, here is another one (ours for this project):
 - Go to the official [website](https://nodejs.org/en) and download the latest LTS version  and follow the instructions or use a package manager like *apt* or [*snap*](https://github.com/nodejs/snap)
 ```bash
 sudo snap install node --classic --channel=18
@@ -91,19 +101,19 @@ docker run --publish 3000:3000 frontend
         - daphne (installed &check;, used &check;)
         - celery (installed &check;, used &cross;)
         - redis (installed &check;, used &cross;)
-        - channels (installed &cross;)
-        - channels-redis (installed &cross;)
+        - channels (installed &check;)
+        - channels-redis (installed &check;)
         - postgres (&cross; do not need to be installed on virtual env)
     - &cross; configuration
-        - &cross; celery
-        - &cross; redis
+        - &check; celery
+        - &check; redis
         - &cross; postgres
     - &cross; websocket
         - &cross; config
         - &cross; defining path
         - &cross; implement dummy chatbot behavior
 - React App :x:
-    - &cross; chatbot page 
+    - &check; chatbot page 
     - &cross; install packages: websocket etc
     - &cross; add dummy chatbot action management
 - Dockerfiles :heavy_check_mark:
