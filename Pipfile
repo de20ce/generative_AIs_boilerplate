@@ -12,6 +12,7 @@ redis = "*"
 uvicorn = "*"
 channels = "*"
 channels-redis = "*"
+psycopg2 = "*"
 
 [dev-packages]
 

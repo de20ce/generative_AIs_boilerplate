@@ -77,8 +77,12 @@ ASGI_APPLICATION = 'core.asgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':  'postgres1',
+        'USER': 'postgresUser',
+        'PASSWORD': 'UserPassEEIA2023',
+        'HOST': 'postgres1',
+        'PORT':'5432',
     }
 }
 
