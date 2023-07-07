@@ -4,8 +4,10 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Celery](https://img.shields.io/badge/celery-%23.svg?style=for-the-badge&logo=celery&logoColor=white)
 ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 
 
@@ -14,7 +16,7 @@ Generative AI Project SetUp
 ---------------------------
 
 
-This project is done during EEIA 2023. EEIA is a summer school organised by *La Fondation Vallet*, *Benin Excellence* and *UNDP* in Benin.  The EEIA takes place over 4 weeks. The first three weeks are devoted to classes, practical work and lectures. The fourth is dedicated to projects. EEIA projects are practical solutions to computing problems solved with AI. The aim is to help students find their own solutions to AI problems, thanks to the lectures and practical work they receive during the first three weeks. The project we are sharing here involves creating a chatbot that can generate images and text from text(a kind of [Midjourney](https://docs.midjourney.com/)). The fundamental goal is to teach them how to do transfer learning on the one hand, and how to integrate their new model into an application (typically a web app) on the other.
+This project is done during EEIA 2023. EEIA is a summer school organised by *La Fondation Vallet*, *Benin Excellence* and *UNDP* in Benin.  The EEIA takes place over 4 weeks. The first three weeks are devoted to classes, practical work and lectures. The fourth is dedicated to projects. EEIA projects are practical solutions to computing problems solved with AI. The aim is to help students find their own solutions to AI problems, thanks to the lectures and practical work they receive during the first three weeks. The project we are sharing here involves creating a chatbot that can generate images and text from text(a kind of [Midjourney](https://docs.midjourney.com/)). The fundamental goal is to teach them how to do transfer learning on the one hand, and how to integrate their new model into an application (typically a web app) on the other. This project is developped using Scrum approach.
 
 The project was managed by the following people:
 > - [Landry **Bossou**](https://github.com/oudinef) as a lead developer.
@@ -109,13 +111,18 @@ docker run --publish 3000:3000 frontend
         - &check; redis
         - &cross; postgres
     - &cross; websocket
-        - &cross; config
-        - &cross; defining path
-        - &cross; implement dummy chatbot behavior
+        - &check; config
+        - &check; defining path
+        - &check; implement dummy chatbot behavior
+        - &cross; implement the generative ML app
+        - &cross; finetune the pre-trained model
 - React App :x:
     - &check; chatbot page 
     - &cross; install packages: websocket etc
     - &cross; add dummy chatbot action management
+    - &cross; defining websocket path
+- Send message from the frontend to the backend chatbot dummy engine app, and receive the response on the front :x:
+- send message from the frontend to the backend pre-trained chatbot engine, and receive the response on the front :x:
 - Dockerfiles :heavy_check_mark:
 - docker compose :x:
 - Apps management tools :heavy_check_mark:

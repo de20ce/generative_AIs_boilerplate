@@ -13,6 +13,9 @@ uvicorn = "*"
 channels = "*"
 channels-redis = "*"
 psycopg2 = "*"
+asgiref = "*"
+pytest-django = "*"
+pytest-asyncio = "*"
 
 [dev-packages]
 

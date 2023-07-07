@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # My Apps
+    'chatbot'
     
 ]
 
@@ -77,12 +79,12 @@ ASGI_APPLICATION = 'core.asgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':  'postgres1',
-        'USER': 'postgresUser',
-        'PASSWORD': 'UserPassEEIA2023',
-        'HOST': 'postgres1',
-        'PORT':'5432',
+        'ENGINE': os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
+        'NAME':  os.environ.get("SQL_DATABASE", os.path.join(BASE_DIR, "db.sqlite3")),
+        'USER': os.environ.get("SQL_USER", "user"),
+        'PASSWORD': os.environ.get("SQL_PASSWORD", "password"),
+        'HOST': os.environ.get("SQL_HOST", "localhost"),
+        'PORT':os.environ.get("SQL_PORT", "5432"),
     }
 }
 
@@ -128,5 +130,29 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CELERY_BROKER_URL = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
-CELERY_RESULT_BACKEND = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
+# Celery
+CELERY_BROKER_URL = os.environ.get("CELERY_BROKER_URL", "redis://127.0.0.1:6379/0")
+CELERY_RESULT_BACKEND = os.environ.get("CELERY_BROKER_BACKEND", "redis://127.0.0.1:6379/0")
+
+# Redis Cache
+# "LOCATION": "unique-snowflake",
+# more info: https://docs.djangoproject.com/en/4.2/topics/cache/
+CACHES = {
+    "default":{
+        "BACKEND": os.environ.get("CACHES_BACKENDS", "django.core.cache.backends.locmem.LocMemCache"),
+        "LOCATION": os.environ.get("CELERY_BROKER_BACKEND", "redis://127.0.0.1:6379/0"),
+    },
+}
+
+# Django Channels
+# Possible backend argument: "channels.layers.InMemoryChannelLayer"
+#                            "channels_redis.core.RedisChannelLayer",
+# https://channels.readthedocs.io/en/stable/topics/channel_layers.html
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
+        #"CONFIG": {
+        #    "hosts": [os.environ.get("CELERY_BROKER_BACKEND", "redis://127.0.0.1:6379/0")],
+        #},
+    },
+}
