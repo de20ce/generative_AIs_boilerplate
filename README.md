@@ -119,7 +119,7 @@ docker run --publish 3000:3000 frontend
 - React App :x:
     - &check; chatbot page 
     - &cross; install packages: websocket etc
-    - &cross; add dummy chatbot action management
+    - &check; add dummy chatbot action management
     - &cross; defining websocket path
 - Send message from the frontend to the backend chatbot dummy engine app, and receive the response on the front :x:
 - send message from the frontend to the backend pre-trained chatbot engine, and receive the response on the front :x:
