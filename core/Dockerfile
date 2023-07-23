@@ -10,11 +10,13 @@ RUN mkdir /opt/services/generative_AIs_boilerplate/core/src
 
 WORKDIR /opt/services/generative_AIs_boilerplate/core/src
 
-COPY ./Pipfile ./Pipfile.lock /opt/services/generative_AIs_boilerplate/core/src/
+COPY ./Pipfile ./Pipfile.lock ./entrypoint.sh /opt/services/generative_AIs_boilerplate/core/src/
 RUN pip install pipenv
 RUN pipenv install --system
 
-COPY ./core /opt/services/generative_AIs_boilerplate/core/src
+
+# copy project into container
+COPY . /opt/services/generative_AIs_boilerplate/core/src
 
 EXPOSE 8000
 
@@ -22,3 +24,6 @@ EXPOSE 8000
 # more on daphne: https://github.com/django/daphne
 # The reason we have been using daphne finally is it works for a couple of protocols unlike uvicorn
 CMD ["daphne", "-b", "0.0.0.0", "-p", "8080", "core.asgi:application"]
+
+# run entrypoint.sh instead of cmd with compose or not
+#ENTRYPOINT [ "/opt/services/generative_AIs_boilerplate/core/src/entrypoint.sh" ]

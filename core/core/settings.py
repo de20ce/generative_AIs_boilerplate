@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-9*6xh#iszx7wdj-5a7j@a7k^%v0j7)jm!u_b23ldm+-)yi^sp)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -150,9 +150,9 @@ CACHES = {
 # https://channels.readthedocs.io/en/stable/topics/channel_layers.html
 CHANNEL_LAYERS = {
     "default": {
-        "BACKEND": "channels.layers.InMemoryChannelLayer",
-        #"CONFIG": {
-        #    "hosts": [os.environ.get("CELERY_BROKER_BACKEND", "redis://127.0.0.1:6379/0")],
-        #},
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [os.environ.get("CELERY_BROKER_BACKEND", "redis://127.0.0.1:6379/0")],
+        },
     },
 }
