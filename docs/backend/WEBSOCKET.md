@@ -12,9 +12,9 @@ docker run -p 8000:8080 --name django -d backend
 # start the redis broker
 docker run -p 6379:6379 --name core-redis -d redis:alpine
 #3 enter your virtual env shell
-pipen shell && cd core
+pipenv shell && cd core
 #4 go to the core directory 
-celery --app core worker --loglevel=debug
+celery --app core worker --loglevel=info
 
 ```
 Open another terminal, and from the root directory of the project,

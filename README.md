@@ -1,4 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/de20ce/generative_AIs_boilerplate/blob/master/LICENSE)
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-310/)
+[![Django 4.2](https://img.shields.io/badge/Django-4.2-blue.svg)](https://docs.djangoproject.com/en/4.2/releases/2.0/)
 ![Django App](https://github.com/de20ce/generative_AIs_boilerplate/actions/workflows/django.yml/badge.svg)
 <br/>
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
@@ -72,7 +74,7 @@ with pipenv can be found [here](https://realpython.com/pipenv-guide/)
 
 From that point, you just need to follow up the ordinary path of creating project and apps within django.You also need to have docker installed on your system.
 
-## building the project from this repo
+## Building the project from this repo(Prod level is not ready yet. Description will put later on the docs.)
 
 Go inside the directory you will like to download the project and run in your terminal the following: 
 ```bash
@@ -93,6 +95,10 @@ In another terminal and inside the current directory, run the frontend react app
 docker build . -t frontend -f react.Dockerfile
 docker run --publish 3000:3000 frontend
 ```
+
+## Building the project (Dev level)
+
+Please check out the `docs` directory for more information about how to do it!
 
 # ToDo
 - Django App :x:
@@ -120,10 +126,10 @@ docker run --publish 3000:3000 frontend
     - &check; chatbot page 
     - &cross; install packages: websocket etc
     - &check; add dummy chatbot action management
-    - &cross; defining websocket path
-- Send message from the frontend to the backend chatbot dummy engine app, and receive the response on the front :x:
+    - &check; defining websocket path
+- Send message from the frontend to the backend chatbot dummy engine app, and receive the response on the front :heavy_check_mark:
 - send message from the frontend to the backend pre-trained chatbot engine, and receive the response on the front :x:
-- Dockerfiles :heavy_check_mark:
+- Dockerfiles :x:
 - docker compose :x:
 - Apps management tools :heavy_check_mark:
     - pipenv &check;
