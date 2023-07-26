@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # My Apps
-    'chatbot'
-    'text2text'
+    'chatbot',
+    'text2text',
     
 ]
 
