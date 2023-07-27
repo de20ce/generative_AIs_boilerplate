@@ -16,6 +16,7 @@ psycopg2 = "*"
 asgiref = "*"
 pytest-django = "*"
 pytest-asyncio = "*"
+chatterbot = "*"
 
 [dev-packages]
 
