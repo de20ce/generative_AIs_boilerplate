@@ -1,0 +1,27 @@
+CACHES_BACKEND=django.core.cache.backends.redis.RedisCache
+# Channels
+CHANNELS_BACKEND=channels_redis.core.RedisChannelLayer
+#
+
+SECRET=
+
+# Celery conf
+CELERY_BROKER_URL=redis://redis:6379/0
+CELERY_BROKER_BACKEND=redis://redis:6379/0
+
+# Postgres conf
+SQL_ENGINE=django.db.backends.postgresql_psycopg2
+SQL_DATABASE=postgres1
+# write out your own
+SQL_USER=
+# write out your own
+SQL_PASSWORD=
+SQL_PORT=5432
+# your service name
+SQL_HOST=postgres1
+
+POSTGRES_DB=postgres1
+# write out your own and same as in compose
+POSTGRES_USER=
+# write out your own and same as in compose
+POSTGRES_PASSWORD=
