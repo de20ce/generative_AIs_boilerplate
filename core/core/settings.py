@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-9*6xh#iszx7wdj-5a7j@a7k^%v0j7)jm!u_b23ldm+-)yi^sp)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost']
+# remove wildcard for prod
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost',  '*.ngrok-free.app', '*', ]
 
 
 # Application definition
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     # My Apps
     'chatbot',
     'text2text',
+    'text2image',
     
 ]
 
