@@ -2,7 +2,4 @@
 .env
 
 env
-core/chatbot/__pycache__/
-core/chatbot/migrations/__pycache__/
-core/core/__pycache__/
-core/text2text/__pycache__/
+__pycache__

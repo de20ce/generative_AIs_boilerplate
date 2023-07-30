@@ -35,6 +35,17 @@ And here are names of the learners:
 
 On the server side, we [implant](https://asgi.readthedocs.io/en/latest/implementations.html) an ASGI (Asynchronous Server Gateway Interface) protocol. Unlike WSGI, ASGI intends to allow handling of multiple common protocol styles like HTTP, HTTP/2 and WebSocket. We experiment with a couple of implementation and we decide to use Daphne. The other frameworks that you can use in place of [Daphne](http://github.com/django/daphne) are [Uvicorn](https://www.uvicorn.org/), [Hypercorn](https://pgjones.gitlab.io/hypercorn/index.html), [Granian](https://github.com/emmett-framework/granian). The server is attached to an ML model inside and to a React frontend app outside. Only the server  and the frontend app are within this repo.
 
+## Context and Description 
+
+- Use case 1:
+
+After a purchase, a company's customers want to benefit from an after-sales service where they can ask any questions they may have about the company's products. To meet this demand, the company sets up one or more teams of professionals dedicated to this task. However, not all companies have the resources (human, financial, material, etc.) to deploy such teams. So what alternative is there?
+
+- Use case 2:
+
+Artists, graphic designers, journalists, book authors, digital companies often need to generate fictional scenes with real characters. To do this, they use either manual tools (pencil, wood, granite, stone, etc.) or technological ones (digital cameras, photo editing software, etc.). These processes are not always efficient, and generally require specialized and expensive skills. What alternative do they have?
+
+
 
 ## Frontend
 
@@ -46,8 +57,13 @@ sudo n stable
 ```
 
 ### NodeJS installation
-[Above](#frontend), we show one way of doing that, here is another one (ours for this project):
-- Go to the official [website](https://nodejs.org/en) and download the latest LTS version  and follow the instructions or use a package manager like *apt* or [*snap*](https://github.com/nodejs/snap)
+[Above](#frontend), we show one way of doing that, here are some others:
+
+- First method: 
+
+    - Go to the official [website](https://nodejs.org/en) and download the latest LTS version  and follow the instructions or
+- Second method(ours for this project): 
+    - use a package manager like *apt* or [*snap*](https://github.com/nodejs/snap)
 ```bash
 sudo snap install node --classic --channel=18
 ```
@@ -80,7 +96,7 @@ Go inside the directory you will like to download the project and run in your te
 ```bash
 git clone https://github.com/de20ce/generative_AIs_boilerplate.git
 docker build . -t backend
-docker run --publish 8000:8080 backend
+docker run --publish 8000:8080 --name django -d backend
 ```
 
 Alternatively for the first command above, you can use Github CLI ```gh``` tool
@@ -89,11 +105,11 @@ Alternatively for the first command above, you can use Github CLI ```gh``` tool
 gh repo clone https://github.com/de20ce/generative_AIs_boilerplate
 ```
 
-In another terminal and inside the current directory, run the frontend react app:
+In another terminal and inside `react_app` folder from the root, run the frontend react app:
 
 ```bash
-docker build . -t frontend -f react.Dockerfile
-docker run --publish 3000:3000 frontend
+docker build . -t frontend -f Dockerfile
+docker run --publish 3000:3000 --name react -d frontend
 ```
 
 ## Building the project (Dev level)
@@ -115,13 +131,17 @@ Please check out the `docs` directory for more information about how to do it!
     - &cross; configuration
         - &check; celery
         - &check; redis
-        - &cross; postgres
+        - &check; postgres
     - &cross; websocket
         - &check; config
         - &check; defining path
         - &check; implement dummy chatbot behavior
         - &cross; implement the generative ML app
         - &cross; finetune the pre-trained model
+    - &cross; apps
+        - &check; dummy chatbot app
+        - &cross; text to text chatbot app
+        - &cross; text to image chatbot app
 - React App :x:
     - &check; chatbot page 
     - &cross; install packages: websocket etc
@@ -129,14 +149,44 @@ Please check out the `docs` directory for more information about how to do it!
     - &check; defining websocket path
 - Send message from the frontend to the backend chatbot dummy engine app, and receive the response on the front :heavy_check_mark:
 - send message from the frontend to the backend pre-trained chatbot engine, and receive the response on the front :x:
-- Dockerfiles :x:
-- docker compose :x:
+- Dockerfiles heavy_check_mark
+    - &check; frontend Dockerfile
+    - &check; backend Dockerfile
+- docker compose heavy_check_mark
+    - &check; frontend docker compose file
+    - &check; backend docker compose file
 - Apps management tools :heavy_check_mark:
     - pipenv &check;
     - yarn &check;
     
 
 # Useful links 
+- On Programming:
+
+[^1]: [Building a chat application with React and Django Channels](https://blog.logrocket.com/build-chat-application-react-django-channels/)
+
+[^2]: [Build a ChatBot Using Python, Django](https://dev.to/documatic/build-a-chatbot-using-python-django-46hb)
+
+[^3]: [ChatterBot: Build a Chatbot With Python](https://realpython.com/build-a-chatbot-python-chatterbot/)
+
+[^4]: [ChatterBot Tutorial](https://chatterbot.readthedocs.io/en/stable/tutorial.html)
+
+[^5]: [django framework](https://www.djangoproject.com/)
+
+- On  Machine learning:
+
+[^1]: [Wikipedia: Naive Bayes Classifier](https://en.wikipedia.org/wiki/Naive_Bayes_classifier)
+
+[^2]: [Reminder of the First Paper on Transfer Learning in Neural Networks, 1976](https://www.informatica.si/index.php/informatica/article/viewFile/2828/1433)
+
+- On Application:
+
+[^1]: [Wikipedia: Sentiment Analysis](https://en.wikipedia.org/wiki/Sentiment_analysis)
+
+[^2]: [Midjourney ](https://docs.midjourney.com/)
+
+[^3]: [Hugging Face ](https://huggingface.co/)
+
 
 # 
 ### 📝 Citing
