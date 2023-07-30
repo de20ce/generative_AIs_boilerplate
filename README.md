@@ -149,10 +149,10 @@ Please check out the `docs` directory for more information about how to do it!
     - &check; defining websocket path
 - Send message from the frontend to the backend chatbot dummy engine app, and receive the response on the front :heavy_check_mark:
 - send message from the frontend to the backend pre-trained chatbot engine, and receive the response on the front :x:
-- Dockerfiles heavy_check_mark
+- Dockerfiles :heavy_check_mark:
     - &check; frontend Dockerfile
     - &check; backend Dockerfile
-- docker compose heavy_check_mark
+- docker compose :heavy_check_mark:
     - &check; frontend docker compose file
     - &check; backend docker compose file
 - Apps management tools :heavy_check_mark:
