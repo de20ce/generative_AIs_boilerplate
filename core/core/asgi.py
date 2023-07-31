@@ -14,6 +14,7 @@ from channels.routing import ProtocolTypeRouter, URLRouter
 from channels.security.websocket import AllowedHostsOriginValidator
 from django.core.asgi import get_asgi_application
 import chatbot.routing
+import text2text.routing
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
 
@@ -23,7 +24,7 @@ application = ProtocolTypeRouter(
     {
         "http": asgi_chatbot_app,
         "websocket": AllowedHostsOriginValidator(
-            AuthMiddlewareStack(URLRouter(chatbot.routing.websocket_urlpatterns))
+            AuthMiddlewareStack(URLRouter(text2text.routing.websocket_urlpatterns))
         ),
     }
 )
