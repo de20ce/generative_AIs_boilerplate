@@ -17,8 +17,8 @@ celery = "*"
 redis = "*"
 psycopg2 = "*"
 transformers = "*"
-torch = "*"
 xformers = "*"
+torch = "*"
 
 [dev-packages]
 
