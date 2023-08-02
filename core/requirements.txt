@@ -1,7 +1,7 @@
-torch
-transformers
-xformers
-diffusers
-scipy
-torchvision
-torchaudio
+torch==2.0.1
+transformers==4.31.0
+xformers==0.0.20
+diffusers==0.19.3
+scipy==1.11.1
+torchvision==0.15.2
+torchaudio=2.0.2                                                                                                                                                                                                                                                                                            
