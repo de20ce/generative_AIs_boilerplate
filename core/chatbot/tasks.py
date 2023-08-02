@@ -19,7 +19,7 @@ def get_response(channel_name, input_data):
     logging.info(f'input keys in get_Response : {input_data.keys()}')
     response = dummy_response(input_data)
     
-    response_data = response # should be serialize if object
+    response_data = response # should be serialized if object
 
     async_to_sync(channel_layer.send)(
         channel_name,

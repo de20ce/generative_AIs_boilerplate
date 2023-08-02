@@ -88,7 +88,7 @@ following package within [```pipenv```](https://pipenv.pypa.io/en/latest/) tool.
 with pipenv can be found [here](https://realpython.com/pipenv-guide/)
 
 
-From that point, you just need to follow up the ordinary path of creating project and apps within django.You also need to have docker installed on your system.
+From that point, you just need to follow up the ordinary path of creating project and apps within django. You also need to have docker installed on your system.
 
 ## Building the project from this repo(Prod level is not ready yet. Description will put later on the docs.)
 
@@ -123,12 +123,12 @@ Please check out the `docs` directory for more information about how to do it!
         - gunicorn (installed &check;, used &cross;)
         - uvicorn (installed &check;, used &cross;)
         - daphne (installed &check;, used &check;)
-        - celery (installed &check;, used &cross;)
-        - redis (installed &check;, used &cross;)
+        - celery (installed &check;, used &check;)
+        - redis (installed &check;, used &check;)
         - channels (installed &check;)
         - channels-redis (installed &check;)
-        - postgres (&cross; do not need to be installed on virtual env)
-    - &cross; configuration
+        - postgres (&check; do not need to be installed on virtual env)
+    - &check; configuration
         - &check; celery
         - &check; redis
         - &check; postgres
@@ -171,7 +171,9 @@ Please check out the `docs` directory for more information about how to do it!
 
 [^4]: [ChatterBot Tutorial](https://chatterbot.readthedocs.io/en/stable/tutorial.html)
 
-[^5]: [django framework](https://www.djangoproject.com/)
+[^5]: [django Framework](https://www.djangoproject.com/)
+
+[^6]: [Channels and Websocket Tests](https://github.com/django/channels/blob/main/tests/test_generic_websocket.py)
 
 - On  Machine learning:
 
