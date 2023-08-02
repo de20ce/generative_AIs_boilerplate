@@ -1,0 +1,7 @@
+transformers
+xformers
+diffusers
+scipy
+torch
+torchvision
+torchaudio

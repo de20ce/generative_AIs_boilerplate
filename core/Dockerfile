@@ -10,14 +10,15 @@ RUN mkdir /opt/services/generative_AIs_boilerplate/core/src
 
 WORKDIR /opt/services/generative_AIs_boilerplate/core/src
 
-COPY ./Pipfile ./Pipfile.lock  /opt/services/generative_AIs_boilerplate/core/src/
+COPY ./Pipfile ./Pipfile.lock ./requirements.txt  /opt/services/generative_AIs_boilerplate/core/src/
 RUN pip install pipenv
 RUN pipenv install --system
-
+RUN pip install -r requirements.txt 
 # copy project into container
 COPY . /opt/services/generative_AIs_boilerplate/core/src
 
 COPY ./scripts/celery_worker_starter.sh /
+# for Windows user
 RUN sed -i 's/\r$//g' /celery_worker_starter.sh
 
 COPY ./scripts/entrypoint.sh /
