@@ -13,6 +13,8 @@ WORKDIR /opt/services/generative_AIs_boilerplate/core/src
 COPY ./Pipfile ./Pipfile.lock ./requirements.txt  /opt/services/generative_AIs_boilerplate/core/src/
 RUN pip install pipenv
 RUN pipenv install --system
+RUN pip install torch torchvision torchaudio
+RUN pip install transformers xformers diffusers
 RUN pip install -r requirements.txt 
 # copy project into container
 COPY . /opt/services/generative_AIs_boilerplate/core/src
