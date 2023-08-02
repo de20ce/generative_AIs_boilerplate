@@ -23,6 +23,7 @@ class ChatConsumer(WebsocketConsumer):
         if user_input:
             # Call the task synchronously
             response_data = get_response(user_input)
+            
         else:
             response_data = "Please, you should enter a text"
 
