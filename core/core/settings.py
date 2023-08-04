@@ -159,3 +159,11 @@ CHANNEL_LAYERS = {
         },
     },
 }
+
+# ngrok set-up
+import sys
+
+BASE_URL = "http://0.0.0.0:8000"
+DEV_SERVER = len(sys.argv) > 1
+USE_NGROK = os.environ.get("USE_NGROK", "False") == True and os.environ("RUN_MAIN", None) != "true"
+
