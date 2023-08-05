@@ -48,7 +48,7 @@ Artists, graphic designers, journalists, book authors, digital companies often n
 
 ## Notebooks
 - Here find out an example startup for fine tuning a text2text model  
-[![A text2text fine-tuning example](https://colab.research.google.com/assets/colab-bage.svg)](https://colab.research.google.com/drive/1FbG484FGsQCYBro4c5KcGi2lniGDg8Sp#scrollTo=rYvbI-qkE-Hj)
+[![A text2text fine-tuning example](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1FbG484FGsQCYBro4c5KcGi2lniGDg8Sp#scrollTo=rYvbI-qkE-Hj)
 
 - Here find out an example startup for fine tuning a text2image model 
 [![A text2image fine-tuning example](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1nb7RqfzPHG_6MXxsIfhsSi9ZWh6qYvg9?hl=fr#scrollTo=-mD_9LkXeHNX)
