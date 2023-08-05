@@ -16,13 +16,8 @@ psycopg2 = "*"
 asgiref = "*"
 pytest-django = "*"
 pytest-asyncio = "*"
-torch = "*"
-torchvision = "*"
-transformers = "*"
-diffusers = "*"
-xformers = "*"
 scipy = "*"
-pyngrok = "*"
+ngrok = "*"
 
 [dev-packages]
 
