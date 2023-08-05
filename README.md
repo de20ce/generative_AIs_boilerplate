@@ -46,7 +46,12 @@ After a purchase, a company's customers want to benefit from an after-sales serv
 
 Artists, graphic designers, journalists, book authors, digital companies often need to generate fictional scenes with real characters. To do this, they use either manual tools (pencil, wood, granite, stone, etc.) or technological ones (digital cameras, photo editing software, etc.). These processes are not always efficient, and generally require specialized and expensive skills. What alternative do they have?
 
+## Notebooks
+- Here find out an example startup for fine tuning a text2text model  
+[![A text2text fine-tuning example](https://colab.research.google.com/assets/colab-bage.svg)](https://colab.research.google.com/drive/1FbG484FGsQCYBro4c5KcGi2lniGDg8Sp#scrollTo=rYvbI-qkE-Hj)
 
+- Here find out an example startup for fine tuning a text2image model 
+[![A text2image fine-tuning example](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1nb7RqfzPHG_6MXxsIfhsSi9ZWh6qYvg9?hl=fr#scrollTo=-mD_9LkXeHNX)
 
 ## Frontend
 
