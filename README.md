@@ -24,6 +24,7 @@ The project was managed by the following people:
 > - [Landry **Bossou**](https://github.com/oudinef) as a lead developer.
 > - [Vivien **Ogoun**](https://github.com/vivienogoun) as a lead developer.
 > - [Tanguy **Nobime**](https://github.com/adonislab) as a lead developer.
+> - [Konig **Koudogbo**](https://github.com/puzzle29) as the IT dev lead support and a project manager.
 > - [Vincent **Whannou de Dravo**](https://github.com/de20ce) as the tech lead and the project manager.
 
 And here are names of the learners:
@@ -95,6 +96,7 @@ From that point, you just need to follow up the ordinary path of creating projec
 Go inside the directory you will like to download the project and run in your terminal the following: 
 ```bash
 git clone https://github.com/de20ce/generative_AIs_boilerplate.git
+cd generative_AIs_boilerplate/core
 docker build . -t backend
 docker run --publish 8000:8080 --name django -d backend
 ```
@@ -137,16 +139,17 @@ Please check out the `docs` directory for more information about how to do it!
         - &check; defining path
         - &check; implement dummy chatbot behavior
         - &cross; implement the generative ML app
-        - &cross; finetune the pre-trained model
+        - &check; finetune the pre-trained model
     - &cross; apps
         - &check; dummy chatbot app
-        - &cross; text to text chatbot app
+        - &check; text to text chatbot app
         - &cross; text to image chatbot app
 - React App :x:
     - &check; chatbot page 
-    - &cross; install packages: websocket etc
+    - &check; install packages: websocket etc
     - &check; add dummy chatbot action management
     - &check; defining websocket path
+    - &cross; Create a tab for the 3 chatbot apps: dummy, text2text and text2image
 - Send message from the frontend to the backend chatbot dummy engine app, and receive the response on the front :heavy_check_mark:
 - send message from the frontend to the backend pre-trained chatbot engine, and receive the response on the front :x:
 - Dockerfiles :heavy_check_mark:
@@ -174,6 +177,7 @@ Please check out the `docs` directory for more information about how to do it!
 [^5]: [django Framework](https://www.djangoproject.com/)
 
 [^6]: [Channels and Websocket Tests](https://github.com/django/channels/blob/main/tests/test_generic_websocket.py)
+[^7]: [ngrok Agent for Python ASGI Apps](https://github.com/ngrok/ngrok-python#asgi-runner---tunnels-to-uvicorn-gunicorn-django-and-more-with-no-code)
 
 - On  Machine learning:
 
@@ -194,7 +198,7 @@ Please check out the `docs` directory for more information about how to do it!
 ### 📝 Citing
 ```
 @misc{WhannouDeDravo:2023,
-  Author = {Vincent, Whannou de Dravo and Landry, Bossou and Adonis, Nobime and Vivien, Ogoun},
+  Author = {Vincent, Whannou de Dravo and Landry, Bossou and Adonis, Nobime and Vivien, Ogoun and Konig, Koudogbo},
   Title = {React Django Chatbot Boilerplate for Generative AI},
   Year = {2023},
   Publisher = {GitHub},
